@@ -1,1 +1,6 @@
 *.swp
+
+tmp/restart.txt
+tmp/pids/
+
+log/development.log

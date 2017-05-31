@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require_relative 'setup/simplecov'
 
-#Bundler.require(:default, :test)
+Bundler.require(:default, :test)
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
