@@ -3,6 +3,7 @@ AllCops:
   Exclude:
     - 'db/schema.rb'
     - 'db/*/**'
+    - 'vendor/*/**'
 
 Layout/EmptyLineAfterMagicComment:
   Enabled: false
