@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require_relative 'setup/simplecov'
+require_relative 'support/simplecov'
+require File.expand_path('../../config/environment', __FILE__)
 
 Bundler.require(:default, :test)
 

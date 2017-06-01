@@ -9,3 +9,15 @@ Layout/EmptyLineAfterMagicComment:
 
 Style/Documentation:
   Enabled: false
+
+Metrics/LineLength:
+  Max: 130
+
+Style/BlockDelimiters:
+  Exclude:
+    - 'spec/*/**'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/*/**'
+

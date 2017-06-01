@@ -1,6 +1,9 @@
 language: ruby
-
 rvm:
-  - 2.3
-
-script: bundle install && rubocop
+  - 2.4
+env:
+  - DB=postgres
+script:
+  - bundle install
+  - RAILS_ENV=test bundle exec rake db:create db:migrate db:test:prepare
+  - bundle exec rspec && bundle exec rubocop

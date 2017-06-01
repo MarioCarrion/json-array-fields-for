@@ -1,6 +1,8 @@
 *.swp
-
-tmp/restart.txt
-tmp/pids/
+coverage/
 
 log/development.log
+
+tmp/cache/
+tmp/pids/
+tmp/restart.txt
