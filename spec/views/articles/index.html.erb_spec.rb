@@ -2,12 +2,17 @@
 require 'rails_helper'
 
 describe 'articles/index', type: :view do
-  before(:each) do
-    assign(:articles,
-           [Article.create!(name:        'Name',
-                            description: 'Description'),
-            Article.create!(name:        'Name',
-                            description: 'Description')])
+  before do
+    controller.singleton_class.class_eval do
+      protected
+      def articles
+        [Article.create!(name:        'Name',
+                         description: 'Description'),
+         Article.create!(name:        'Name',
+                         description: 'Description')]
+      end
+      helper_method :articles
+    end
   end
 
   it 'renders a list of articles' do

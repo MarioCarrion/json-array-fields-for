@@ -2,10 +2,15 @@
 require 'rails_helper'
 
 describe 'articles/new', type: :view do
-  let!(:article) do
-    assign(:article,
-           Article.new(name:        'name',
-                       description: 'description'))
+  before do
+    controller.singleton_class.class_eval do
+      protected
+      def article
+        Article.new(name:        'name',
+                    description: 'description')
+      end
+      helper_method :article
+    end
   end
 
   it 'renders new article form' do

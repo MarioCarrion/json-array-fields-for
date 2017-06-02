@@ -17,4 +17,17 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
   config.order = :random
+
+  config.before(:suite) do
+    DatabaseCleaner[:active_record, { model: Base }].clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner[:active_record, { model: Base }].strategy = :truncation
+    DatabaseCleaner[:active_record, { model: Base }].start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner[:active_record, { model: Base }].clean
+  end
 end

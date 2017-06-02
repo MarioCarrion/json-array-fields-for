@@ -12,6 +12,15 @@ describe ArticlesController, type: :controller do
       get :index, params: {}
       expect(response).to be_success
     end
+
+    describe 'view rendering' do
+      render_views
+
+      it 'renders the index template' do
+        get :index
+        expect(response.body).to include('Articles')
+      end
+    end # view rendering
   end # GET #index
 
   describe 'GET #show' do
@@ -28,6 +37,15 @@ describe ArticlesController, type: :controller do
       get :new, params: {}
       expect(response).to be_success
     end
+
+    describe 'view rendering' do
+      render_views
+
+      it 'renders the new template' do
+        get :new
+        expect(response.body).to include('New Article')
+      end
+    end # view rendering
   end # GET #new
 
   describe 'GET #edit' do
