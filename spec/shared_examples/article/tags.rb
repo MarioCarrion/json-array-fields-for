@@ -14,7 +14,7 @@ shared_examples :concerns_article_tags do
     it 'saves the values' do
       subject.tags_attributes = attributes
 
-      expect(subject.tags.map { |x| x.name }).to match(%W(1 2 3))
+      expect(subject.tags.map(&:name)).to match(%w[1 2 3])
     end
   end # tag_attributes=
 end

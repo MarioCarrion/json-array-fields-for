@@ -5,6 +5,7 @@ describe 'articles/new', type: :view do
   before do
     controller.singleton_class.class_eval do
       protected
+
       def article
         Article.new(name:        'name',
                     description: 'description')

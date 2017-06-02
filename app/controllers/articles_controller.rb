@@ -3,8 +3,11 @@ class ArticlesController < ApplicationController
   helper_method :articles, :article
 
   def index; end
+
   def show; end
+
   def new;  end
+
   def edit; end
 
   def create

@@ -5,6 +5,7 @@ describe 'articles/edit', type: :view do
   before do
     controller.singleton_class.class_eval do
       protected
+
       def article
         Article.find(999)
       end
