@@ -1,5 +1,7 @@
 # README
 
+[Rails Tip: Dynamic JSON fields](http://www.mariocarrion.com/2017/06/06/rails-5-json-array-fields.html) Blog Post
+
 [![Build Status](https://travis-ci.org/MarioCarrion/json-array-fields-for.svg?branch=master)](https://travis-ci.org/MarioCarrion/json-array-fields-for)
 [![Test Coverage](https://codeclimate.com/github/MarioCarrion/json-array-fields-for/badges/coverage.svg)](https://codeclimate.com/github/codeclimate/codeclimate/coverage)
 
