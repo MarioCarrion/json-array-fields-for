@@ -5,7 +5,11 @@ env:
   - DB=postgres
 addons:
   postgresql: '9.4'
+  code_climate:
+    repo_token: 944863d6f157f82a2de301893f2463d7e697d6dec2fcc1e45066da8bdb7354f6
 script:
   - bundle install
   - RAILS_ENV=test bundle exec rake db:create db:migrate db:test:prepare
   - bundle exec rspec && bundle exec rubocop
+after_success:
+  - bundle exec codeclimate-test-reporter
